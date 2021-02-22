@@ -1,0 +1,100 @@
+/*
+
+Color Scheme:
+    Blue: #12B3D8
+    Orange: #FF860F
+    Green: #B3F90E
+    Light Gray: #F5F5F5
+
+Fonts:
+    Headings:
+        font-family: 'Share Tech Mono', monospace;
+
+*/
+
+/* ====================================
+        STARTERS
+======================================= */
+
+* {
+  /* box-sizing: border-box; */
+  margin: 10;
+  padding: 10;
+}
+
+body {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 16px;
+  background-color: #212121;
+  color: white;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====================================
+        TYPOGRAPHY
+======================================= */
+
+h1 {
+  font-size: 3rem;
+  color: #b3f90e;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 2rem 0;
+}
+
+/* ====================================
+        LAYOUT
+======================================= */
+
+.limit-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ====================================
+        GRID
+======================================= */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  border: solid 2px black;
+  margin: 0 auto;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  background-color: #12b3d8;
+}
+
+/* ====================================
+        CHARACTERS
+======================================= */
+
+.snake {
+  background-color: #b3f90e;
+}
+
+.apple {
+  background-color: #ff860f;
+}
+
+/* ====================================
+        BUTTON
+======================================= */
+
+button {
+}
