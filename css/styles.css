@@ -25,7 +25,7 @@ Fonts:
 body {
   font-family: "Share Tech Mono", monospace;
   font-size: 16px;
-  background-color: #212121;
+  background-color: #505050;
   color: white;
   line-height: 1.6;
 }
@@ -39,12 +39,28 @@ img {
         TYPOGRAPHY
 ======================================= */
 
+h1,
+h2,
+button {
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: 3rem;
   color: #b3f90e;
-  text-transform: uppercase;
   text-align: center;
-  margin-bottom: 5rem;
+  margin: 3rem auto;
+  border: 3px solid #b3f90e;
+  border-radius: 8px;
+  width: 20rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Share Tech Mono", monospace;
 }
 
 footer p {
@@ -58,9 +74,25 @@ footer p {
 
 .limit-content {
   width: 90%;
+}
+
+.score-display,
+.button-start,
+footer p {
+  text-align: center;
+}
+
+.limit-content,
+.score-display,
+.grid,
+.button-start,
+.button-support {
   margin: 0 auto;
 }
 
+#score {
+  margin-left: 0.3rem;
+}
 /* ====================================
         GRID
 ======================================= */
@@ -68,16 +100,17 @@ footer p {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  width: 200px;
-  height: 200px;
-  border: solid 2px black;
-  margin: 0 auto;
+  width: 20rem;
+  height: 20rem;
+  background-color: #212121;
+  padding: 2px;
+  border: dashed 4px gray;
 }
 
 .square {
-  width: 20px;
-  height: 20px;
-  background-color: #12b3d8;
+  width: 2rem;
+  height: 2rem;
+  background-color: #212121;
 }
 
 /* ====================================
@@ -86,10 +119,16 @@ footer p {
 
 .snake {
   background-color: #b3f90e;
+  border-radius: 50%;
 }
 
 .apple {
-  background-color: #ff860f;
+  display: block;
+  /* text-indent: -9999px; */
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/apple.svg);
+  background-size: 2rem 2rem;
 }
 
 /* ====================================
@@ -97,4 +136,43 @@ footer p {
 ======================================= */
 
 button {
+  margin-top: 3rem;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  box-shadow: 0 0.5rem #ac2023;
+  background-color: red;
+  color: white;
+}
+
+button:hover {
+  position: relative;
+  top: 0.5rem;
+  box-shadow: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button-support {
+  width: 7rem;
+  height: 7rem;
+  background: #633637;
+  border-radius: 50%;
+  position: relative;
+  z-index: -10;
+  top: -5.5rem;
+  box-shadow: 0 0.3rem #4d2628;
+}
+
+/* ====================================
+        MEDIA QUERY
+======================================= */
+
+@media only screen and (min-width: 430px) {
+}
+
+@media only screen and (min-width: 1080px) {
 }
