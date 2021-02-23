@@ -25,7 +25,7 @@ Fonts:
 body {
   font-family: "Share Tech Mono", monospace;
   font-size: 16px;
-  background-color: #505050;
+  background-color: #313030;
   color: white;
   line-height: 1.6;
 }
@@ -65,7 +65,7 @@ button {
 
 footer p {
   font-size: 1rem;
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 
 /* ====================================
@@ -161,10 +161,71 @@ button:focus {
   height: 7rem;
   background: #633637;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   z-index: -10;
-  top: -5.5rem;
-  box-shadow: 0 0.3rem #4d2628;
+  bottom: 6.2rem;
+  left: 8.22rem;
+  box-shadow: 0 0.3rem #361b1c;
+}
+
+/* ====================================
+        FOOTER
+======================================= */
+
+.footer {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+#flip {
+  height: 30px;
+  overflow: hidden;
+}
+
+#flip > div > div {
+  color: #fff;
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+#flip div:first-child {
+  animation: show 10s linear infinite;
+}
+
+#flip div div,
+#flip div:first-child div,
+#flip div:last-child div {
+  color: gray;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
 }
 
 /* ====================================
@@ -175,4 +236,8 @@ button:focus {
 }
 
 @media only screen and (min-width: 1080px) {
+  .button-support {
+    bottom: 15.7rem;
+    left: 50.4rem;
+  }
 }

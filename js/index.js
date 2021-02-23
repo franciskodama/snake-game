@@ -3,6 +3,9 @@
 const grid = document.querySelector('.grid');
 const startButton = document.getElementById('start');
 const scoreDisplay = document.getElementById('score');
+const audioBite = document.getElementById('audio-bite'); 
+const audioStart = document.getElementById('audio-start'); 
+const audioDie = document.getElementById('audio-die'); 
 let squares = [];
 let currentSnake = [2, 1, 0];
 let direction = 1;
@@ -35,6 +38,9 @@ createGrid();
 currentSnake.forEach(index => squares[index].classList.add('snake'));
 
 function startGame() {
+    //sound effect of the button
+    audioStart.play(); 
+
     //remove the snake
     currentSnake.forEach(index => squares[index].classList.remove('snake'));
     //remove the apple 
@@ -77,6 +83,8 @@ function move() {
     if (squares[currentSnake[0]].classList.contains('apple')) {
         //remove the class of apple
         squares[currentSnake[0]].classList.remove('apple');
+        //sound effect of the bite
+        playBite();
         //grow snake by adding class of snake
         squares[tail].classList.add('snake');
         //grow snake array
@@ -119,7 +127,18 @@ function control(e) {
     }
 }
 
+function playBite() { 
+    audioBite.play(); 
+  }
 
+function playStart() { 
+audioStart.play(); 
+}
+
+
+function playDie() { 
+audioDie.play(); 
+}
 
 
 
