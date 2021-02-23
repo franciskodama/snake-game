@@ -2,10 +2,15 @@
 
 const grid = document.querySelector('.grid');
 const startButton = document.getElementById('start');
+const upButton = document.querySelector('.btn-up');
+const downButton = document.querySelector('.btn-down');
+const rightButton = document.querySelector('.btn-right');
+const leftButton = document.querySelector('.btn-left');
 const scoreDisplay = document.getElementById('score');
 const audioBite = document.getElementById('audio-bite'); 
 const audioStart = document.getElementById('audio-start'); 
 const audioDie = document.getElementById('audio-die'); 
+const audioTurn = document.getElementById('audio-turn'); 
 let squares = [];
 let currentSnake = [2, 1, 0];
 let direction = 1;
@@ -21,6 +26,10 @@ let timerId = 0;
 
 document.addEventListener('keyup', control);
 startButton.addEventListener('click', startGame);
+upButton.addEventListener('click', controlUp);
+downButton.addEventListener('click', controlDown);
+rightButton.addEventListener('click', controlRight);
+leftButton.addEventListener('click', controlLeft);
 
 
 //FUNCTIONS -------------------------------
@@ -40,7 +49,6 @@ currentSnake.forEach(index => squares[index].classList.add('snake'));
 function startGame() {
     //sound effect of the button
     audioStart.play(); 
-
     //remove the snake
     currentSnake.forEach(index => squares[index].classList.remove('snake'));
     //remove the apple 
@@ -79,7 +87,7 @@ function move() {
     //add square in direction we are heading
     currentSnake.unshift(currentSnake[0] + direction);
     
-    //deal with snake nead getting the apple
+    //deal with snake eating the apple
     if (squares[currentSnake[0]].classList.contains('apple')) {
         //remove the class of apple
         squares[currentSnake[0]].classList.remove('apple');
@@ -113,33 +121,57 @@ generateApple();
 function control(e) {
     // 38 is for the up arrow
     if(e.keyCode === 38) {
+        playTurn();
         direction = -width;
     // 39 is right arrow
     } else if(e.keyCode === 39) {
+        playTurn();
         direction = 1;
     // 40 is for the down arrow
     } else if(e.keyCode === 40) {
-        console.log("baixo");
+        playTurn();
         direction = +width;
     // 37 is for the left arrow
     } else if(e.keyCode === 37) {
+        playTurn();
         direction = -1;
     }
 }
 
+function controlUp() {
+    direction = -width;
+    playTurn();
+}
+
+function controlDown() {
+    direction = +width;
+    playTurn();
+}
+
+function controlRight() {
+    direction = 1;
+    playTurn();
+}
+
+function controlLeft() {
+    direction = -1;
+    playTurn();
+}
+
 function playBite() { 
     audioBite.play(); 
-  }
+}
 
 function playStart() { 
 audioStart.play(); 
 }
 
-
 function playDie() { 
 audioDie.play(); 
 }
 
-
+function playTurn() { 
+    audioTurn.play(); 
+    }
 
 
