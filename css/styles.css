@@ -58,7 +58,7 @@ h1 {
   text-align: center;
   border: 3px solid #b3f90e;
   border-radius: 8px;
-  width: 20rem;
+  width: 19rem;
   margin: 1rem auto 1.5rem auto;
   display: block;
 }
@@ -308,17 +308,66 @@ button:focus {
 }
 
 @media only screen and (min-width: 1080px) {
+  h1 {
+    font-size: 4rem;
+    border-radius: 1rem;
+    width: 30rem;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
   /* GRID */
 
   .grid {
-    width: 20rem;
-    height: 20rem;
+    width: 30rem;
+    height: 30rem;
   }
 
   .square {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /* CHARACTER */
+
+  .apple {
+    width: 3rem;
+    height: 3rem;
+    background-size: 3rem 3rem;
   }
 
   /* BUTTON */
+
+  button {
+    font-size: 0.9rem;
+  }
+
+  .button-action {
+    flex-direction: column;
+  }
+
+  .btn-up,
+  .btn-right,
+  .btn-down,
+  .btn-left {
+    display: none;
+  }
+
+  .button-start {
+    margin-top: 1rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /* BUTTON */
+
+  .gameover {
+    font-size: 0.9rem;
+    top: 45%;
+    left: 48%;
+    width: 5rem;
+  }
 }
