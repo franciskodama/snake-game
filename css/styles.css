@@ -54,18 +54,17 @@ h3 {
 
 h1 {
   color: #b3f90e;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   border: 3px solid #b3f90e;
   border-radius: 8px;
   width: 20rem;
-  padding: 0.5rem 0;
-  margin: 1.5rem auto 2.5rem auto;
+  margin: 1rem auto 1.5rem auto;
   display: block;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 button {
@@ -109,16 +108,16 @@ footer p {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  width: 20rem;
-  height: 20rem;
+  width: 19rem;
+  height: 19rem;
   background-color: #212121;
   padding: 1px;
   border: dashed 4px gray;
 }
 
 .square {
-  width: 2rem;
-  height: 2rem;
+  width: 1.9rem;
+  height: 1.9rem;
 }
 
 /* ====================================
@@ -132,10 +131,10 @@ footer p {
 
 .apple {
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 1.9rem;
+  height: 1.9rem;
   background: url(../img/apple.svg);
-  background-size: 2rem 2rem;
+  background-size: 1.9rem 1.9rem;
 }
 
 /* ====================================
@@ -155,7 +154,6 @@ button {
   align-items: center;
   width: 19rem;
   margin: 0 auto;
-  margin-top: 1rem;
   text-align: center;
 }
 
@@ -202,7 +200,7 @@ button:focus {
   font-size: 1.2rem;
   border-radius: 0.5rem;
   width: 4rem;
-  height: 3rem;
+  height: 2.5rem;
   color: #eecfbb;
   box-shadow: 0 0.5rem #da4c28;
   background-color: #f47320;
@@ -227,7 +225,7 @@ button:focus {
   text-align: center;
   margin: 0 auto;
   position: absolute;
-  top: 35%;
+  top: 45%;
   left: 44%;
   width: 3rem;
   animation: roll 4s infinite;
@@ -249,7 +247,7 @@ button:focus {
 .footer {
   font-size: 0.8rem;
   text-align: center;
-  margin-top: 1.8rem;
+  margin-top: 1rem;
 }
 
 #flip {
