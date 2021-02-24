@@ -10,7 +10,8 @@ const scoreDisplay = document.getElementById('score');
 const audioBite = document.getElementById('audio-bite'); 
 const audioStart = document.getElementById('audio-start'); 
 const audioDie = document.getElementById('audio-die'); 
-const audioTurn = document.getElementById('audio-turn'); 
+const audioTurn = document.getElementById('audio-turn');
+const gameOver = document.getElementById('over');
 let squares = [];
 let currentSnake = [2, 1, 0];
 let direction = 1;
@@ -48,7 +49,10 @@ currentSnake.forEach(index => squares[index].classList.add('snake'));
 
 function startGame() {
     //sound effect of the button
-    audioStart.play(); 
+    audioStart.play();
+    //clear game over animation
+    gameOver.classList.remove('gameover');
+    gameOver.style.display = 'none';
     //remove the snake
     currentSnake.forEach(index => squares[index].classList.remove('snake'));
     //remove the apple 
@@ -79,7 +83,7 @@ function move() {
     (currentSnake[0] - width < 0 && direction === -width) ||
     squares[currentSnake[0] + direction].classList.contains('snake')
     )
-    return clearInterval(timerId);
+    return playDie(); 
 
     //remove last element from currentSnake array
     const tail = currentSnake.pop();
@@ -135,6 +139,8 @@ function control(e) {
     } else if(e.keyCode === 37) {
         playTurn();
         direction = -1;
+    } else if(e.keyCode === 32) {
+        startGame();
     }
 }
 
@@ -163,15 +169,18 @@ function playBite() {
 }
 
 function playStart() { 
-audioStart.play(); 
+    audioStart.play();
 }
 
 function playDie() { 
-audioDie.play(); 
+    clearInterval(timerId);
+    gameOver.style.display = 'block';
+    gameOver.classList.add('gameover');
+    audioDie.play();
 }
 
 function playTurn() { 
     audioTurn.play(); 
-    }
+}
 
 
