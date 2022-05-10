@@ -46,12 +46,6 @@ button {
   text-transform: uppercase;
 }
 
-h3 {
-  color: #f47320;
-  background-color: #212121;
-  border-radius: 1rem;
-}
-
 h1 {
   color: #b3f90e;
   font-size: 1.8rem;
@@ -67,15 +61,17 @@ h2 {
   font-size: 1.3rem;
 }
 
+h3 {
+  color: #f47320;
+  background-color: #212121;
+  border-radius: 1rem;
+}
+
 button {
   font-family: "Share Tech Mono", monospace;
   font-size: 0.7rem;
 }
 
-footer p {
-  font-size: 1rem;
-  margin: 4rem 0;
-}
 
 /* ====================================
         LAYOUT
@@ -83,7 +79,6 @@ footer p {
 
 .limit-content {
   width: 100%;
-  /* padding: 0.5rem; */
   margin: 0 auto;
 }
 
@@ -101,6 +96,7 @@ footer p {
 #score {
   margin-left: 0.3rem;
 }
+
 /* ====================================
         GRID
 ======================================= */
@@ -138,7 +134,7 @@ footer p {
 }
 
 /* ====================================
-        BUTTON
+        BUTTONS
 ======================================= */
 
 button {
@@ -362,7 +358,7 @@ button:focus {
     height: 5rem;
   }
 
-  /* BUTTON */
+  /* GAME OVER */
 
   .gameover {
     font-size: 0.9rem;
